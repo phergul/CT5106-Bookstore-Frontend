@@ -13,7 +13,7 @@ export const deleteAuthor = async (link: string): Promise<AuthorResponse> => {
 
 export const addAuthor = async (author: Author): Promise<AuthorResponse> => {
   const response = await axios.post(
-    `http://localhost:8080api/authors`,
+    `http://localhost:8080/api/authors`,
     author,
     {
       headers: { "Content-Type": "application/json" },

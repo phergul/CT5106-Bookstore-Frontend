@@ -7,12 +7,14 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import GetBooks from './components/GetBooks';
 import GetAuthors from './components/GetAuthors';
+import GetPublishers from './components/GetPublishers';
+import GetReviews from './components/GetReviews';
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
-    <Container maxWidth="xl">
+    <Container disableGutters={true} maxWidth="xl">
       <CssBaseline />
       <AppBar position="static">
         <Toolbar>
@@ -24,6 +26,8 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <GetBooks />
         <GetAuthors />
+        <GetPublishers />
+        <GetReviews />
       </QueryClientProvider>
     </Container>
   );

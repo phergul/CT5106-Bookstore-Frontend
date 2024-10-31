@@ -20,8 +20,8 @@ function AddAuthor() {
   const mutation = useMutation({
     mutationFn: addAuthor,
     onSuccess: () => {
-      setOpen(true);
-      queryClient.invalidateQueries({ queryKey: ["books"] });
+      setOpen(false);
+      queryClient.invalidateQueries({ queryKey: ["authors"] });
     },
     onError: (err: Error) => {
       console.error(err);

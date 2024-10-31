@@ -69,3 +69,64 @@ export type AuthorEntry = {
   author: Author;
   url: string;
 };
+
+
+//publisher types
+
+export type PublisherResponse = {
+  name: string;
+  address: string;
+  _links: {
+    self: {
+      href: string;
+    };
+    publisher: {
+      href: string;
+    };
+    publishedBooks: {
+      href: string;
+    };
+  };
+};
+
+export type Publisher = {
+  name: string;
+  address: string;
+};
+
+export type PublisherEntry = {
+  publisher: Publisher;
+  url: string;
+};
+
+
+//review types
+
+
+export type ReviewResponse = {
+  rating: number;
+  comment: string;
+  reviewDate: string;
+  _links: {
+    self: {
+      href: string;
+    };
+    review: {
+      href: string;
+    };
+    book: {
+      href: string;
+    };
+  };
+};
+
+export type Review = {
+  rating: number;
+  comment: string;
+  reviewDate: string;
+};
+
+export type ReviewEntry = {
+  review: Review;
+  url: string;
+};

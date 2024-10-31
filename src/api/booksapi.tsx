@@ -1,10 +1,8 @@
 import { BookResponse, Book, BookEntry } from "../types";
 import axios from "axios";
 
-const apiUrl: string = "http://localhost:8080";
-
 export const getBooks = async (): Promise<BookResponse[]> => {
-  const response = await axios.get(`${apiUrl}/api/books`);
+  const response = await axios.get(`http://localhost:8080/api/books`);
   return response.data._embedded.books;
 };
 
@@ -15,7 +13,7 @@ export const deleteBook = async (link: string): Promise<BookResponse> => {
 
 export const addBook = async (book: Book): Promise<BookResponse> => {
   const response = await axios.post(
-    `${apiUrl}/api/books`,
+    `http://localhost:8080/api/books`,
     book,
     {
       headers: { "Content-Type": "application/json" },

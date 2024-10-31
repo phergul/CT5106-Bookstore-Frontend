@@ -25,7 +25,7 @@ function AuthorDialogContent({ author, handleChange }: DialogFormProps) {
         />
         <br />
         <input
-          placeholder="dd-mm-yyyy"
+          placeholder="yyyy-mm-dd"
           name="dob"
           value={author.dob}
           onChange={handleChange}

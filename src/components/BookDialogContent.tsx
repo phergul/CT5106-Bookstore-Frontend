@@ -20,26 +20,26 @@ function BookDialogContent({ book, handleChange }: DialogFormProps) {
         <input
           placeholder="Price"
           name="price"
-          value={book.price}
+          value={book.price == 0 ? undefined : book.price}
           onChange={handleChange}
         />
         <br />
         <input
           placeholder="Stock"
           name="stock"
-          value={book.stock}
+          value={book.stock == 0 ? undefined : book.stock}
           onChange={handleChange}
         />
         <br />
         <input
           placeholder="Rating"
           name="rating"
-          value={book.rating}
+          value={book.rating == 0 ? undefined : book.rating}
           onChange={handleChange}
         />
         <br />
         <input
-          placeholder="dd-mm-yyyy"
+          placeholder="yyyy-mm-dd"
           name="releaseDate"
           value={book.releaseDate}
           onChange={handleChange}

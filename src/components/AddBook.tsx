@@ -23,7 +23,7 @@ function AddBook() {
   const mutation = useMutation({
     mutationFn: addBook,
     onSuccess: () => {
-      setOpen(true);
+      setOpen(false);
       queryClient.invalidateQueries({ queryKey: ["books"] });
     },
     onError: (err: Error) => {
